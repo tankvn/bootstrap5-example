@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>My First Example</title>
+	<title>Bootstrap Example</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bootstrap-5.0.0-beta3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./bootstrap-5.0.0-beta3/js/bootstrap.min.js"></script>
 </head>
 <body>
-	<h1>My First Heading</h1>
-	<p>My first paragraph.</p>
+
+<div class="container">
+	<h3>Tooltip Example</h3>
+	<p>The data-placement attribute specifies the tooltip position.</p>
+	<ul class="list-inline">
+		<li class="list-inline-item"><a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a></li>
+		<li class="list-inline-item"><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+		<li class="list-inline-item"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+		<li class="list-inline-item"><a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+		<li class="list-inline-item"><a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+	</ul>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
 </body>
 </html>
